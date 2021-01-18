@@ -1,0 +1,28 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommended Movies</title>
+    <link rel="stylesheet"type="text/css" href="{% static 'css/style1.css'%} " >
+</head>
+<body>
+    <div class="result-main_box">
+        {% block content %}
+        <div class="result-answer">
+            <br><br><br><br><br><br>
+<h3>The relatable movies are:</h3>
+{%for i in movie%}
+<br>
+<h4>{{i}}</h4>
+
+{%endfor%}
+
+{% endblock %}
+</div>
+    </div>
+    <form action="logout">
+        <button type='submit' class="logout-btn" >Logout</button>
+</body>
+</html>

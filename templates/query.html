@@ -1,0 +1,25 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Querry</title>
+    <link rel="stylesheet"type="text/css" href="{% static 'css/style1.css'%} " >
+</head>
+<body>
+    <div class="main_box">
+    <form action="result" class="query-form">
+        {%csrf_token%}
+        <input type="text" name="query" class="query-input"placeholder="Enter Movie Name"><br>
+        <button type="submit" name="query-submit"class="query-submit">Submit</button>
+    </form>
+    </div>
+    <div class="home">
+        <h1 id="logo" ><a id="image" href="home">Home</a></h1>
+    </div>
+    <form action="logout">
+    <button type='submit' class="logout-btn" >Logout</button>
+</form>
+</body>
+</html>
